@@ -35,7 +35,7 @@ AOS.init({
 
 const projects = ref([
   {
-    image: "src/assets/IMG1-1.png",
+    image: "../assets/IMG1-1.png",
     text: "Office"
   },
   {
