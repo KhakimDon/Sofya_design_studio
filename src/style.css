@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: nunitoblack;
+    src: url('./assets/fonts/Nunito-Black.ttf');
+}
+
+@font-face {
+    font-family: nunitomedium;
+    src: url('./assets/fonts/Nunito-Medium.ttf');
+}
+
+@font-face {
+    font-family: nunitoregular;
+    src: url('./assets/fonts/Nunito-Regular.ttf');
+}
+
+@font-face {
+    font-family: nunitolight;
+    src: url('./assets/fonts/Nunito-Light.ttf');
+}
