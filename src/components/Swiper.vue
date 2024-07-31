@@ -3,22 +3,25 @@
         :pagination="{
             clickable: true,
         }" class="mySwiper relative">
-        <swiper-slide @click="slideClick()" :id="this.info.indexOf(item)" v-for="item of this.info" :key="item.id">
+        <swiper-slide class="m:max-w-[300px]" @click="slideClick()" :id="this.info.indexOf(item)"
+            v-for="item of this.info" :key="item.id">
             <div class="h-[20px]"></div>
             <div class="bg-[#126161]">
-                <img class="w-[100%] h-[330px] object-cover" :src="item.img" alt="image">
+                <img class="w-[100%] h-[330px]  m:h-[280px] object-cover" :src="item.img" alt="image">
             </div>
             <div class="decor-prev"></div>
-            <div class="infoblock h-[120px] bg-[#126161]">
+            <div class="infoblock m:h-[80px] h-[120px] bg-[#126161]">
                 <div
                     class="z-[1] absolute h-[40px] w-[40px] bg-[#126161] rotate-[45deg] left-[50px] translate-y-[-50%]">
                 </div>
                 <div class="z-[2] absolute h-[100%] w-[100%] p-[20px]">
-                    <span class="text-white font-[nunitomedium] text-[30px] leading-[23px]">Abdurahmonov Ilyos</span>
+                    <span class="text-white font-[nunitomedium] m:text-[19px] text-[30px] leading-[23px]">Abdurahmonov
+                        Ilyos</span>
                     <br>
-                    <span class="text-white font-[nunitolight] text-[17px] leading-[23px]">Интерьер дизайнер</span>
+                    <span class="text-white font-[nunitolight] text-[17px] leading-[23px]  m:text-[14px]">Интерьер
+                        дизайнер</span>
                     <svg fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor"
-                        class="size-8 absolute group-hover:rotate-[0deg] right-[15px] bottom-[15px] group-hover:text-black duration-[.3s] text-white">
+                        class="size-8 sm:size-5 absolute group-hover:rotate-[0deg] right-[15px] bottom-[15px] group-hover:text-black duration-[.3s] text-white">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
                     </svg>
                 </div>
@@ -27,15 +30,19 @@
     </swiper>
     <div
         class="w-[100%] z-[999] max-w-[1200px] left-[50%] flex justify-between items-center translate-x-[-50%] bottom-[75px] absolute h-[100px]">
-        <button @click="ArrowSlide('left')" class="hover:bg-[#126161] hover:scale-[1.15] group duration-[.3s] text-white flex translate-y-[-100px] items-center justify-center h-[66px] w-[66px] bg-[transparent] border-[1px] border-[#126161] rounded-[4px]">
-            <svg class="group-hover:stroke-white stroke-[#126161]" width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button @click="ArrowSlide('left')"
+            class="hover:bg-[#126161] hover:scale-[1.15] group duration-[.3s] text-white flex translate-y-[-100px] m:translate-y-[50px]  items-center justify-center h-[66px] m:h-[45px] m:w-[45px] w-[66px] bg-[transparent] border-[1px] border-[#126161] rounded-[4px]">
+            <svg class="group-hover:stroke-white stroke-[#126161]" width="14" height="26" viewBox="0 0 14 26"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12.9481 24.8962L0.999973 12.9481L12.9481 0.999946" stroke="current" stroke-width="1.12648"
                     stroke-linecap="round" stroke-linejoin="round" />
             </svg>
 
         </button>
-        <button @click="ArrowSlide()" class="text-white hover:scale-[1.15] hover:bg-[#126161] group duration-[.3s]  flex items-center translate-y-[-100px] justify-center h-[66px] w-[66px] bg-[transparent] border-[1px] border-[#126161] rounded-[4px]">
-            <svg class="group-hover:stroke-white stroke-[#126161]" width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button @click="ArrowSlide()"
+            class="text-white hover:scale-[1.15] hover:bg-[#126161] group duration-[.3s]  flex items-center translate-y-[-100px] m:translate-y-[50px] justify-center h-[66px] w-[66px] m:h-[45px] m:w-[45px] bg-[transparent] border-[1px] border-[#126161] rounded-[4px]">
+            <svg class="group-hover:stroke-white stroke-[#126161]" width="14" height="26" viewBox="0 0 14 26"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.05176 24.8962L12.9999 12.9481L1.05176 0.999946" stroke="current" stroke-width="1.12648"
                     stroke-linecap="round" stroke-linejoin="round" />
             </svg>
@@ -63,25 +70,25 @@ export default {
             shows: [],
             info: [
                 {
-                    img: "src/assets/1.jpg",
+                    img: "/1.jpg",
                 },
                 {
-                    img: "src/assets/2.png",
+                    img: "/2.png",
                 },
                 {
-                    img: "src/assets/3.png",
+                    img: "/3.png",
                 },
                 {
-                    img: "src/assets/4.jpg",
+                    img: "/4.jpg",
                 },
                 {
-                    img: "src/assets/5.jpg",
+                    img: "/5.jpg",
                 },
                 {
-                    img: "src/assets/6.jpg",
+                    img: "/6.jpg",
                 },
                 {
-                    img: "src/assets/1.jpg",
+                    img: "/1.jpg",
                 },
 
             ]
@@ -91,12 +98,12 @@ export default {
         return {
         };
     },
-    mounted(){
+    mounted() {
     },
     methods: {
-        ArrowSlide(side){
+        ArrowSlide(side) {
             let swiper = document.querySelector(".mySwiper").swiper
-            side == 'left'? swiper.slidePrev() : swiper.slideNext()
+            side == 'left' ? swiper.slidePrev() : swiper.slideNext()
             this.onSwiperInit(document.querySelector(".mySwiper").swiper)
         },
         slideClick() {
@@ -166,8 +173,18 @@ export default {
     opacity: 0;
     transition-duration: 1s;
     position: relative;
-    transform: translateY(70px);
+    transform: translateY(50px);
     border-radius: 0 0 10px 10px;
+}
+
+@media screen and (max-width: 1200px) {
+    .infoblock {
+        opacity: 0;
+        transition-duration: 1s;
+        position: relative;
+        transform: translateY(20px);
+        border-radius: 0 0 10px 10px;
+    }
 }
 
 .swiper-slide-active {

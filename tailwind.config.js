@@ -7,6 +7,11 @@ export default {
   },
   theme: {
     extend: {},
+    screens: {
+      'xl': {'max': '1200px'},
+      'm': {'max': '820px'},
+      'sm': {'max': '500px'},
+    },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };

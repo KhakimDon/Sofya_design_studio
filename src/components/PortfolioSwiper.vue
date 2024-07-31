@@ -3,20 +3,19 @@
         :pagination="{
             clickable: true,
             dynamicBullets: true,
-        }" class="mySwiper relative" :modules="modules" >
-        <swiper-slide @click="slideClick()" :id="this.info.indexOf(item)" v-for="item of this.info" :key="item.id">
+        }" class="mySwiper relative" :modules="modules">
+        <swiper-slide @click="slideClick()" :id="this.info.indexOf(item)" v-for="item of this.info[photos - 1]" :key="item.id">
             <div class="h-[20px]"></div>
             <div class="bg-[#126161] rounded-[10px]">
                 <img class="w-[100%] h-[330px] object-cover" :src="item.img" alt="image">
             </div>
             <div class="decor-prev"></div>
-
         </swiper-slide>
     </swiper>
     <div
         class="w-[100%] z-[999] max-w-[1200px] left-[50%] flex justify-between items-center translate-x-[-50%] bottom-[0px] absolute h-[100px]">
         <button @click="ArrowSlide('left')"
-            class="hover:bg-[#126161] hover:scale-[1.15] group duration-[.3s] text-white flex translate-y-[-100px] items-center justify-center h-[66px] w-[66px] bg-[transparent] border-[1px] border-[#126161] rounded-[4px]">
+            class="hover:bg-[#126161] m:h-[45px] m:w-[45px] hover:scale-[1.15] group duration-[.3s] text-white flex translate-y-[-100px] items-center justify-center h-[66px] w-[66px] bg-[transparent] border-[1px] border-[#126161] rounded-[4px]">
             <svg class="group-hover:stroke-white stroke-[#126161]" width="14" height="26" viewBox="0 0 14 26"
                 fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12.9481 24.8962L0.999973 12.9481L12.9481 0.999946" stroke="current" stroke-width="1.12648"
@@ -24,15 +23,16 @@
             </svg>
 
         </button>
-        
+
         <button @click="ArrowSlide()"
-            class="text-white hover:scale-[1.15] hover:bg-[#126161] group duration-[.3s]  flex items-center translate-y-[-100px] justify-center h-[66px] w-[66px] bg-[transparent] border-[1px] border-[#126161] rounded-[4px]">
+            class="text-white m:h-[45px] m:w-[45px] hover:scale-[1.15] hover:bg-[#126161] group duration-[.3s]  flex items-center translate-y-[-100px] justify-center h-[66px] w-[66px] bg-[transparent] border-[1px] border-[#126161] rounded-[4px]">
             <svg class="group-hover:stroke-white stroke-[#126161]" width="14" height="26" viewBox="0 0 14 26"
                 fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.05176 24.8962L12.9999 12.9481L1.05176 0.999946" stroke="current" stroke-width="1.12648"
                     stroke-linecap="round" stroke-linejoin="round" />
             </svg>
         </button>
+
     </div>
 </template>
 <script>
@@ -56,38 +56,91 @@ export default {
         return {
             shows: [],
             info: [
-                {
-                    img: "src/assets/1.jpg",
-                },
-                {
-                    img: "src/assets/2.png",
-                },
-                {
-                    img: "src/assets/3.png",
-                },
-                {
-                    img: "src/assets/4.jpg",
-                },
-                {
-                    img: "src/assets/5.jpg",
-                },
-                {
-                    img: "src/assets/6.jpg",
-                },
-                {
-                    img: "src/assets/1.jpg",
-                },
-
+                [
+                    {
+                        img: "/portfolio/1.png",
+                    },
+                    {
+                        img: "/portfolio/2.png",
+                    },
+                    {
+                        img: "/portfolio/3.png",
+                    },
+                    {
+                        img: "/portfolio/4.png",
+                    },
+                    {
+                        img: "/portfolio/5.png",
+                    },
+                    {
+                        img: "/portfolio/6.png",
+                    },
+                    {
+                        img: "/portfolio/7.png",
+                    },
+                ],
+                [
+                    {
+                        img: "/portfolio/1.png",
+                    },
+                    {
+                        img: "/portfolio/1.png",
+                    },
+                    {
+                        img: "/portfolio/1.png",
+                    },
+                    {
+                        img: "/portfolio/1.png",
+                    },
+                    {
+                        img: "/portfolio/1.png",
+                    },
+                    {
+                        img: "/portfolio/1.png",
+                    },
+                    {
+                        img: "/portfolio/1.png",
+                    },
+                    {
+                        img: "/portfolio/1.png",
+                    },
+                ],
+                [
+                    {
+                        img: "/portfolio/2.png",
+                    },
+                    {
+                        img: "/portfolio/2.png",
+                    },
+                    {
+                        img: "/portfolio/2.png",
+                    },
+                    {
+                        img: "/portfolio/2.png",
+                    },
+                    {
+                        img: "/portfolio/2.png",
+                    },
+                    {
+                        img: "/portfolio/2.png",
+                    },
+                    {
+                        img: "/portfolio/2.png",
+                    },
+                ]
             ]
         }
+    },
+    props: {
+        photos: Number
     },
     setup() {
         return {
             modules: [Pagination],
-      };
+        };
     },
     mounted() {
-       
+
     },
     methods: {
         ArrowSlide(side) {
@@ -130,11 +183,17 @@ export default {
 };
 </script>
 <style>
-.swiper-pagination{
+.swiper-pagination {
     transform: translateY(-30px) !important;
 }
 
-.swiper-pagination .swiper-pagination-bullet{
+@media screen and (max-width: 1200px) {
+    .swiper-pagination {
+        transform: translateY(-30px) translateX(-30px) !important;
+    }
+}
+
+.swiper-pagination .swiper-pagination-bullet {
     background: #00FFFF;
 }
 

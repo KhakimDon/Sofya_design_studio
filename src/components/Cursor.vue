@@ -77,4 +77,14 @@ export default defineComponent({
     transform: translate(-50%, -50%);
     transition: height .3s, width .3s, border .3s;
 }
+
+@media screen and (max-width: 500px) {
+    .circle {
+        opacity: 0 !important;
+    }
+
+    .cursor {
+        opacity: 0 !important;
+    }
+}
 </style>

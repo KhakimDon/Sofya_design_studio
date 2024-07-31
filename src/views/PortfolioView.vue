@@ -3,6 +3,8 @@ import Header from '../components/Header.vue'
 import Footer from '../components/Footer.vue'
 import PortfolioSwiper from '../components/PortfolioSwiper.vue'
 import { onMounted, ref } from 'vue'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const category = ref(1)
 const styles = ref(1)
@@ -43,11 +45,6 @@ function handleScroll() {
         fourth.classList.remove("active-horizontalscroll")
     }
 }
-
-
-
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 AOS.init();
 
 // You can also pass an optional settings object
@@ -76,134 +73,189 @@ AOS.init({
 });
 
 
+const grids = ref([
+    [
+        {
+            id: 1,
+            grid: 1,
+        },
+        {
+            id: 2,
+            grid: 1,
+        },
+        {
+            id: 3,
+            grid: 1,
+        },
+        {
+            id: 4,
+            grid: 2,
+        },
+        {
+            id: 5,
+            grid: 1,
+        },
+        {
+            id: 6,
+            grid: 1,
+        },
+        {
+            id: 7,
+            grid: 2,
+        },
+        {
+            id: 8,
+            grid: 1,
+        },
+        {
+            id: 9,
+            grid: 1,
+        },
+        {
+            id: 10,
+            grid: 1,
+        },
+    ],
+    [
+        {
+            id: 1,
+            grid: 1,
+        },
+        {
+            id: 2,
+            grid: 1,
+        },
+        {
+            id: 2,
+            grid: 1,
+        },
+        {
+            id: 2,
+            grid: 1,
+        },
+        {
+            id: 2,
+            grid: 1,
+        },
+        {
+            id: 2,
+            grid: 1,
+        },
+        {
+            id: 2,
+            grid: 1,
+        },
+        {
+            id: 2,
+            grid: 1,
+        },
+        {
+            id: 2,
+            grid: 1,
+        },
+        {
+            id: 2,
+            grid: 1,
+        },
+    ],
+])
 
 </script>
 
 <template>
     <Header class="bg-[#191D1D]" />
-    <main class="bg-[#121616] pt-[150px]">
-        <div class="max-w-[1200px] w-[100%] mx-auto min-h-[100vh]">
-            <h3 data-aos="flip-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="uppercase font-[nunitoblack] text-[#00FFFF] text-[40px]">портфолио</h3>
-            <div data-aos="zoom-out" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="flex gap-[20px] mt-[20px]">
-                
-                <div  @click="category = 1" :class="{ activeCategory: category == 1 }"
-                    class="h-[61px] cursorbigRounded hover:bg-[#212828] duration-[.3s] cursor-pointer flex-1 rounded-[10px] bg-[#121616] border-[#00FFFF] border-[1px] p-[20px] flex items-center justify-between">
-                    <span class="uppercase text-white font-[nunitomedium]">Коммерческие интерьеры</span>
+    <section class="cont1  bg-[#191D1D] py-[100px] relative">
+        <div class="max-w-[1200px] xl:max-w-[95%] mx-auto mb-[50px] m:mb-[15px]">
+            <h3 data-aos="flip-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false"
+                class="content1 uppercase font-[nunitoblack] m:text-[24px] mb-[50px] m:mb-[15px] text-[#00FFFF] text-[40px]">
+                {{ $t('protfolio') }}</h3>
+            <div data-aos="zoom-in" data-aos-once="false"
+                class="content1 flex m:gap-[10px] gap-[20px] mt-[20px] basis-[150px] flex-wrap">
+
+                <div @click="styles = 1" :class="{ activeCategory: styles == 1 }"
+                    class="cursorbigRounded h-[61px] hover:bg-[#212828] duration-[.3s] cursor-pointer flex-1 rounded-[10px] bg-[#121616] border-[#00FFFF] border-[1px] p-[20px] flex items-center justify-between">
+                    <span class="uppercase text-white font-[nunitomedium]">Hi tech</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor"
-                        class="size-8 group-hover:text-black duration-[.3s] text-[#00FFFF] rotate-[-90deg]">
+                        class="size-8 m:size-5 group-hover:text-black duration-[.3s] text-[#00FFFF] rotate-[-90deg]">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
                     </svg>
                 </div>
 
-                <div  @click="category = 2" :class="{ activeCategory: category == 2 }"
+                <div @click="styles = 2" :class="{ activeCategory: styles == 2 }"
                     class="h-[61px] cursorbigRounded hover:bg-[#212828] duration-[.3s]  cursor-pointer flex-1 rounded-[10px] bg-[#121616] border-[#00FFFF] border-[1px] p-[20px] flex items-center justify-between">
-                    <span class="uppercase text-white font-[nunitomedium]">Коммерческие интерьеры</span>
+                    <span class="uppercase text-white font-[nunitomedium]">Neo classic</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor"
-                        class="size-8 group-hover:text-black duration-[.3s] text-[#00FFFF] rotate-[-90deg]">
+                        class="size-8 m:size-5 group-hover:text-black duration-[.3s] text-[#00FFFF] rotate-[-90deg]">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
                     </svg>
                 </div>
 
-                <div  @click="category = 3" :class="{ activeCategory: category == 3 }"
+                <div @click="styles = 3" :class="{ activeCategory: styles == 3 }"
                     class="h-[61px] cursorbigRounded hover:bg-[#212828] duration-[.3s]  cursor-pointer flex-1 rounded-[10px] bg-[#121616] border-[#00FFFF] border-[1px] p-[20px] flex items-center justify-between">
-                    <span class="uppercase text-white font-[nunitomedium]">Коммерческие интерьеры</span>
+                    <span class="uppercase text-white font-[nunitomedium]">Minimalism</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor"
-                        class="size-8 group-hover:text-black duration-[.3s] text-[#00FFFF] rotate-[-90deg]">
+                        class="size-8 m:size-5 group-hover:text-black duration-[.3s] text-[#00FFFF] rotate-[-90deg]">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
                     </svg>
                 </div>
 
             </div>
+        </div>
+        <div data-aos="fade-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false"
+            class=" w-[100%]  max-w-[1920px] mx-auto overflow-hidden">
+            <PortfolioSwiper :photos="styles" />
+        </div>
+    </section>
+    <main class="bg-[#121616] pt-[150px]">
+        <div class="max-w-[1200px]  w-[100%] m:max-w-[95%] mx-auto min-h-[100vh]">
+            <h3 data-aos="flip-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false"
+                class="uppercase font-[nunitoblack] text-[#00FFFF] text-[40px] m:text-[24px]">{{ $t('protfolio') }}</h3>
+            <div data-aos="fade-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false"
+                class="flex gap-[20px] mt-[20px]">
 
-            <div class="py-[50px] grid grid-cols-3 flex-wrap gap-[20px]">
-                <figure data-aos="fade-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false"  :class="{ 'col-[1/3]': item == 4, 'col-[2/4]': item == 7 }" v-for="item of 10" :key="item.id"
-                    class="h-[430px] overflow-hidden group rounded-[10px]">
+                <div @click="category = 1" :class="{ activeCategory: category == 1 }"
+                    class="h-[61px] m:h-[45px] cursorbigRounded hover:bg-[#212828] duration-[.3s] cursor-pointer flex-1 rounded-[10px] bg-[#121616] border-[#00FFFF] border-[1px] p-[20px] flex items-center justify-between">
+                    <span class="uppercase text-white font-[nunitomedium] m:text-[15px]">{{ $t('port1') }}</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-8 m:size-5 group-hover:text-black duration-[.3s] text-[#00FFFF] rotate-[-90deg]">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                    </svg>
+                </div>
+
+                <div @click="category = 2" :class="{ activeCategory: category == 2 }"
+                    class="h-[61px] m:h-[45px] cursorbigRounded hover:bg-[#212828] duration-[.3s]  cursor-pointer flex-1 rounded-[10px] bg-[#121616] border-[#00FFFF] border-[1px] p-[20px] flex items-center justify-between">
+                    <span class="uppercase text-white font-[nunitomedium]  m:text-[15px]">{{ $t('port2') }} </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-8 m:size-5 group-hover:text-black duration-[.3s] text-[#00FFFF] rotate-[-90deg]">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
+                    </svg>
+                </div>
+
+            </div>
+            <!-- <button class="btn" v-for="item of port_two.value" :key="item.id">asdads</button> -->
+            <div class="py-[50px] grid grid-cols-3 m:flex flex-wrap gap-[20px]">
+                <figure v-for="item of grids[category - 1]" :key="item.id" :class="{ 'bigcol': item.grid == 2 }"
+                    class="h-[430px] m:h-[initial] overflow-hidden group rounded-[10px]">
                     <img class="h-[100%] w-[100%] group-hover:scale-[1.1] duration-[1s] object-cover"
-                        :src="`src/assets/portfolio/${item}.png`" alt="image">
+                        :src="`/portfolio/${item.id}.png`" alt="image">
                 </figure>
-            </div> 
+            </div>
 
         </div>
     </main>
 
-    <section class="cont1 bg-[#191D1D] py-[100px] relative">
-        <div class="max-w-[1200px] mx-auto mb-[50px]">
-            <h3 data-aos="flip-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="content1 uppercase font-[nunitoblack] mb-[50px] text-[#00FFFF] text-[40px]">портфолио</h3>
-            <div data-aos="zoom-in" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="content1 flex gap-[20px] mt-[20px]">
 
-                <div @click="styles = 1" :class="{ activeCategory: styles == 1 }"
-                    class="cursorbigRounded h-[61px] hover:bg-[#212828] duration-[.3s] cursor-pointer flex-1 rounded-[10px] bg-[#121616] border-[#00FFFF] border-[1px] p-[20px] flex items-center justify-between">
-                    <span class="uppercase text-white font-[nunitomedium]">Коммерческие интерьеры</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor"
-                        class="size-8 group-hover:text-black duration-[.3s] text-[#00FFFF] rotate-[-90deg]">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
-                    </svg>
-                </div>
-                <div @click="styles = 2" :class="{ activeCategory: styles == 2 }"
-                    class="h-[61px] cursorbigRounded hover:bg-[#212828] duration-[.3s]  cursor-pointer flex-1 rounded-[10px] bg-[#121616] border-[#00FFFF] border-[1px] p-[20px] flex items-center justify-between">
-                    <span class="uppercase text-white font-[nunitomedium]">Коммерческие интерьеры</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor"
-                        class="size-8 group-hover:text-black duration-[.3s] text-[#00FFFF] rotate-[-90deg]">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
-                    </svg>
-                </div>
-                <div @click="styles = 3" :class="{ activeCategory: styles == 3 }"
-                    class="h-[61px] cursorbigRounded hover:bg-[#212828] duration-[.3s]  cursor-pointer flex-1 rounded-[10px] bg-[#121616] border-[#00FFFF] border-[1px] p-[20px] flex items-center justify-between">
-                    <span class="uppercase text-white font-[nunitomedium]">Коммерческие интерьеры</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor"
-                        class="size-8 group-hover:text-black duration-[.3s] text-[#00FFFF] rotate-[-90deg]">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
-                    </svg>
-                </div>
-
-            </div>
-            <div data-aos="zoom-in" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="flex gap-[20px] mt-[20px]">
-
-                <div @click="styles = 4" :class="{ activeCategory: styles == 4 }"
-                    class="h-[61px] cursorbigRounded hover:bg-[#212828] duration-[.3s] cursor-pointer flex-1 rounded-[10px] bg-[#121616] border-[#00FFFF] border-[1px] p-[20px] flex items-center justify-between">
-                    <span class="uppercase text-white font-[nunitomedium]">Коммерческие интерьеры</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor"
-                        class="size-8 group-hover:text-black duration-[.3s] text-[#00FFFF] rotate-[-90deg]">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
-                    </svg>
-                </div>
-                <div @click="styles = 5" :class="{ activeCategory: styles == 5 }"
-                    class="h-[61px] cursorbigRounded hover:bg-[#212828] duration-[.3s]  cursor-pointer flex-1 rounded-[10px] bg-[#121616] border-[#00FFFF] border-[1px] p-[20px] flex items-center justify-between">
-                    <span class="uppercase text-white font-[nunitomedium]">Коммерческие интерьеры</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor"
-                        class="size-8 group-hover:text-black duration-[.3s] text-[#00FFFF] rotate-[-90deg]">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
-                    </svg>
-                </div>
-                <div @click="styles = 6" :class="{ activeCategory: styles == 6 }"
-                    class="h-[61px] cursorbigRounded hover:bg-[#212828] duration-[.3s]  cursor-pointer flex-1 rounded-[10px] bg-[#121616] border-[#00FFFF] border-[1px] p-[20px] flex items-center justify-between">
-                    <span class="uppercase text-white font-[nunitomedium]">Коммерческие интерьеры</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor"
-                        class="size-8 group-hover:text-black duration-[.3s] text-[#00FFFF] rotate-[-90deg]">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
-                    </svg>
-                </div>
-
-            </div>
-        </div>
-        <div data-aos="fade-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="w-[100%]  max-w-[1920px] mx-auto overflow-hidden">
-            <PortfolioSwiper />
-        </div>
-    </section>
-
-    <section class="horizontal-scroll bg-[#121616] py-[100px]">
-        <div class="max-w-[1200px] min-h-[562px] mx-auto w-[100%]">
-            <h3 data-aos="flip-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="uppercase font-[nunitoblack] mb-[40px] text-[#00FFFF] text-[40px]">Этапы работы</h3>
-            <div class="flex gap-[15px]">
+    <section class=" horizontal-scroll bg-[#121616] py-[100px]">
+        <div class="max-w-[1200px] xl:max-w-[95%] min-h-[562px] mx-auto w-[100%]">
+            <h3 data-aos="flip-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false"
+                class="uppercase m:text-[24px] font-[nunitoblack] mb-[40px] text-[#00FFFF] text-[40px]">{{ $t('steps') }}
+            </h3>
+            <div class="flex gap-[15px] m:gap-[45px] m:flex-col">
 
                 <div class="horizontal-scroll-first min-h-[50px]  flex-1">
                     <div class="flex items-center">
@@ -213,8 +265,8 @@ AOS.init({
                         <div class="h-[1px] horizontal-line duration-[2.5s] max-w-[0px] flex-1 bg-[#00FFFF]"></div>
                     </div>
                     <div class="horizontal-scroll-text duration-[2s] delay-[.5s] opacity-0 translate-y-[50px]">
-                        <span class="block mt-[15px] font-[nunitoblack] text-white">Договор</span>
-                        <p class="font-[nunitoregular] text-white">Мы подписываем договор и вы вносите предоплату 30%
+                        <span class="block mt-[15px] font-[nunitoblack] text-white">{{ $t('steps1') }}</span>
+                        <p class="font-[nunitoregular] text-white">{{ $t('steps11') }}
                         </p>
                     </div>
                 </div>
@@ -227,11 +279,8 @@ AOS.init({
                         <div class="h-[1px] horizontal-line duration-[2.5s] max-w-[0px] flex-1 bg-[#00FFFF]"></div>
                     </div>
                     <div class="horizontal-scroll-text duration-[2s] delay-[.5s] opacity-0 translate-y-[50px]">
-                        <span class="block mt-[15px] font-[nunitoblack] text-white">Техническое задание</span>
-                        <p class="font-[nunitoregular] text-white">Мы связываемся с замерщиками в вашем городе, они
-                            делают
-                            для нас фотографии и замеры помещения. Заполняем техническое задание на проект, где вы
-                            записываете все свои пожелания. Подбираем аналоги интерьеров, которые вам нравятся.</p>
+                        <span class="block mt-[15px] font-[nunitoblack] text-white">{{ $t('steps2') }}</span>
+                        <p class="font-[nunitoregular] text-white">{{ $t('steps22') }}</p>
                     </div>
                 </div>
 
@@ -243,12 +292,8 @@ AOS.init({
                         <div class="h-[1px] horizontal-line duration-[2.5s] max-w-[0px] flex-1 bg-[#00FFFF]"></div>
                     </div>
                     <div class="horizontal-scroll-text duration-[2s] delay-[.5s] opacity-0 translate-y-[50px]">
-                        <span class="block mt-[15px] font-[nunitoblack] text-white">Планирование и коллажи</span>
-                        <p class="font-[nunitoregular] text-white">Создаем планировочное решение (2-3 варианта),
-                            согласовываем лучший. Вы оплачиваете следующую часть платежа в размере 30% Созпаваемые
-                            коллажи
-                            отражают общую цветовую гамму, зонирование пространства и виды используемых отделочных
-                            материалов, а таюже мебель и источники света (без указания конкретного производителя).</p>
+                        <span class="block mt-[15px] font-[nunitoblack] text-white">{{ $t('steps3') }}</span>
+                        <p class="font-[nunitoregular] text-white">{{ $t('steps33') }}</p>
                     </div>
                 </div>
 
@@ -260,14 +305,8 @@ AOS.init({
                         <div class="h-[1px] horizontal-line duration-[2.5s] max-w-[0px] flex-1 bg-[#00FFFF]"></div>
                     </div>
                     <div class="horizontal-scroll-text duration-[2s] delay-[.5s] opacity-0 translate-y-[50px]">
-                        <span class="block mt-[15px] font-[nunitoblack] text-white">3d визуализация и
-                            документация</span>
-                        <p class="font-[nunitoregular] text-white">Вы оплачиваете следующую часть платежа в размере -
-                            30%
-                            Создаем фотореалистичные изображения интерьера, согласовываем все помещения. После
-                            утверждения
-                            всех 3D визуализаций вносится предоплата - 10% за этап документации, готовим чертежи и
-                            спецификации. Представляем готовый дизайн-проект.</p>
+                        <span class="block mt-[15px] font-[nunitoblack] text-white">{{ $t('steps4') }}</span>
+                        <p class="font-[nunitoregular] text-white">{{ $t('steps44') }}</p>
                     </div>
                 </div>
 
@@ -279,7 +318,9 @@ AOS.init({
 </template>
 
 <style>
-.active-horizontalscroll {}
+.bigcol {
+    grid-column: span 2;
+}
 
 .active-horizontalscroll .horizontal-scroll-text {
     opacity: 1;
@@ -307,6 +348,15 @@ AOS.init({
     border-color: white;
     flex: 1.5;
     background: white;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .activeCategory {
+        border-color: white;
+        flex: 1.1;
+        background: white;
+    }
 }
 
 .activeCategory span {

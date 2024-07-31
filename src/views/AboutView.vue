@@ -37,43 +37,29 @@ AOS.init({
 <template>
   <Header class="bg-[#191D1D]" />
   <main>
-    <section class="h-[900px] w-[100%] bg-[#121616]">
-      <div class="max-w-[1200px] w-[100%] mx-auto pt-[130px]">
-        <h3 data-aos="flip-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="uppercase font-[nunitoblack] text-[#00FFFF] text-[40px]">О нас</h3>
-        <p data-aos="flip-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="max-w-[513px] text-white font-[nunitolight] mt-[10px] mb-[44px]">
-          В портфолио мы собрали реализованные по нашим проектам объекты (дизайн-проект)
+    <section class="h-[900px] m:h-[800px] w-[100%] bg-[#121616]">
+      <div class="max-w-[1200px] xl:max-w-[95%] w-[100%] mx-auto pt-[130px]">
+        <h3 data-aos="flip-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="uppercase m:text-[24px] font-[nunitoblack] text-[#00FFFF] text-[40px]">{{ $t('aboutus') }}</h3>
+        <p data-aos="flip-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="max-w-[513px] text-white font-[nunitolight] m:text-[14px] m:mt-[0px] mt-[10px] mb-[44px]">
+          {{ $t('aboutusText') }}
         </p>
       </div>
-      <div class="w-[100%] max-w-[1920px] mx-auto overflow-hidden pl-[220px]">
+      <div class="w-[100%] max-w-[1920px] mx-auto overflow-hidden pl-[220px] sm:pl-0">
         <Swiper />
       </div>
     </section>
     <section class="bg-[#121616]">
-      <div class="h-[641px] relative z-[2] bg-[#121616]">
-        <iframe data-aos="fade-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="h-[100%] rounded-[20px] z-[2] max-w-[1140px] w-[100%] mx-auto"
+      <div class="h-[641px] m:h-[230px] m:px-[20px] relative z-[2] bg-[#121616]">
+        <iframe data-aos="fade-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="h-[100%] rounded-[20px] m:rounded-[10px] z-[2] max-w-[1140px] w-[100%] mx-auto"
           src="https://www.youtube.com/embed/ll5-uxVPdkI" title="Анимация интерьера в Unreal Engine 5 | Работа студента"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <div class="absolute left-0 bottom-[50%] translate-y-[50%] w-[100%] h-[336px] bg-[#126161] z-[-2]"></div>
+        <div class="absolute left-0 bottom-[50%] m:h-[200px] translate-y-[50%] w-[100%] h-[336px] bg-[#126161] z-[-2]"></div>
       </div>
       <div class="max-w-[1021px] mt-[50px] pb-[50px] mx-auto">
-        <p data-aos="fade-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="text-center text-white font-[nunitolight] text-[20px]">
-          Lorem ipsum dolor sit amet consectetur. Pharetra elit gravida orci ultrices diam scelerisque faucibus. Lectus
-          suscipit enim est et vivamus eleifend montes velit. Vitae in pellentesque platea cursus. In sagittis volutpat
-          aenean mattis quisque.Lorem ipsum dolor sit amet consectetur. Pharetra elit gravida orci ultrices diam
-          scelerisque faucibus. Lectus suscipit enim est et vivamus eleifend montes velit. Lorem ipsum dolor sit amet
-          consectetur. Pharetra elit gravida orci ultrices diam scelerisque faucibus. Lectus suscipit enim est et
-          vivamus eleifend montes velit.
-          Lorem ipsum dolor sit amet consectetur. Pharetra elit gravida orci ultrices diam scelerisque faucibus. Lectus
-          suscipit enim est et vivamus eleifend montes velit. Vitae in pellentesque platea cursus. In sagittis volutpat
-          aenean mattis quisque.Lorem ipsum dolor sit amet consectetur. Pharetra elit gravida orci ultrices diam
-          scelerisque faucibus. Lectus suscipit enim est et vivamus eleifend montes velit. Lorem ipsum dolor sit amet
-          consectetur. Pharetra elit gravida orci ultrices diam scelerisque faucibus. Lectus suscipit enim est et
-          vivamus eleifend montes velit.
-          Pharetra elit gravida orci ultrices diam scelerisque faucibus. Lectus suscipit enim est et vivamus eleifend
-          montes velit. Pharetra elit gravida orci ultrices diam scelerisque faucibus. Lectus suscipit enim est et
-          vivamus eleifend.
+        <p data-aos="fade-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="text-center text-white font-[nunitolight] text-[20px] m:text-[17px] m:text-left m:px-[10px]">
+          {{ $t('aboutabout') }}
         </p>
       </div>
     </section>
