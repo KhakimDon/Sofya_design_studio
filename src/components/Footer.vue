@@ -3,6 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ref } from 'vue';
 import axios from 'axios'
+import router from '../router'
 
 AOS.init();
 
@@ -76,8 +77,8 @@ function sender() {
             </h3>
             <div data-aos="fade-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="flex items-start gap-[20px] sm:gap-[10px] sm:flex-col">
 
-                <div 
-                    class="h-[345.45px] sm:h-[140px] sm:rounded-[10px] cursor-pointer group hover:bg-[white] hover:mr-[20px] duration-[.3s] w-[345.45px] sm:w-[100%] relative border-white p-[30px] sm:p-[20px] border-[1px] rounded-[20px]">
+                <a target="_blank" href="https://www.instagram.com/sofya_design_studio/"
+                    class="block h-[345.45px] sm:h-[140px] sm:rounded-[10px] cursor-pointer group hover:bg-[white] hover:mr-[20px] duration-[.3s] w-[345.45px] sm:w-[100%] relative border-white p-[30px] sm:p-[20px] border-[1px] rounded-[20px]">
                     <span
                         class="uppercase duration-[.3s] group-hover:text-[black] font-[nunitomedium] sm:text-[19px] text-[30px] text-white">INSTAGRAM</span>
                     <svg width="198" height="190"
@@ -92,12 +93,12 @@ function sender() {
                         <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 4.5 15 15m0 0V8.25m0 11.25H8.25" />
                     </svg>
 
-                </div>
+                </a>
 
                 <div class="h-[345.45px] sm:h-[180px] sm:w-[100%] flex-1 flex flex-col gap-[20px] sm:gap-[10px]">
                     <div class="h-[40%] w-[100%] flex sm:gap-[10px] gap-[20px]">
-                        <div 
-                            class="w-[50%] sm:rounded-[10px]  cursor-pointer hover:w-[80%] duration-[.3s] group hover:bg-white relative border-white p-[30px] sm:p-[20px] border-[1px] justify-between rounded-[20px] h-[100%] flex items-center">
+                        <a  href="https://t.me/Firdavs_dsg" target="_blank"
+                            class=" w-[50%] sm:rounde/d-[10px]  cursor-pointer hover:w-[80%] duration-[.3s] group hover:bg-white relative border-white p-[30px] sm:p-[20px] border-[1px] justify-between rounded-[20px] h-[100%] flex items-center">
                             <span
                                 class="uppercase duration-[.3s] group-hover:text-[black] font-[nunitomedium] sm:text-[19px] text-[30px] text-white">
                                 Telegram
@@ -116,8 +117,8 @@ function sender() {
                                     fill="current" />
                             </svg>
 
-                        </div>
-                        <div 
+                        </a>
+                        <a target="_blank"  href="https://wa.me/998901772299"
                             class="w-[50%] hover:w-[80%]  sm:p-[20px] overflow-hidden relative group hover:bg-white duration-[.3s] cursor-pointer flex items-center justify-between p-[30px] border-white border-[1px] rounded-[20px] sm:rounded-[10px] h-[100%]">
                             <span
                                 class="uppercase duration-[.3s] group-hover:text-[black] font-[nunitomedium] sm:text-[19px] text-[30px] text-white">
@@ -136,9 +137,9 @@ function sender() {
                                     d="M52.6543 0.895381L49.7435 0.486847C40.9954 -0.77625 32.0685 0.473341 24.0035 4.08994C15.9385 7.70654 9.06767 13.5411 4.19201 20.9135C-0.995575 27.9606 -4.08802 36.3292 -4.72945 45.0563C-5.37088 53.7833 -3.53522 62.5141 0.566272 70.244C0.986027 71.0187 1.24736 71.8692 1.33503 72.746C1.42271 73.6227 1.33497 74.5082 1.07694 75.3507C-1.0168 82.5511 -2.95733 89.8026 -5 97.4115L-2.44666 96.6455C4.44734 94.8071 11.3414 92.9687 18.2354 91.2835C19.6905 90.981 21.2029 91.1233 22.576 91.692C28.7612 94.7107 35.5205 96.3714 42.4004 96.5627C49.2802 96.7541 56.1214 95.4716 62.4648 92.8013C68.8082 90.1311 74.507 86.1349 79.1789 81.0809C83.8507 76.027 87.3875 70.0322 89.5518 63.4988C91.7161 56.9655 92.4579 50.0448 91.7274 43.2011C90.9969 36.3575 88.8109 29.7493 85.3163 23.82C81.8217 17.8907 77.0992 12.7776 71.4658 8.82362C65.8324 4.86967 59.4184 2.16645 52.6543 0.895381ZM65.5231 67.8949C63.6672 69.5566 61.4039 70.6967 58.9639 71.199C56.524 71.7014 53.9944 71.548 51.633 70.7547C40.9323 67.7415 31.6486 61.0276 25.4358 51.8089C23.0626 48.5484 21.1548 44.9735 19.7674 41.187C19.0159 38.99 18.8804 36.6292 19.3755 34.3606C19.8707 32.092 20.9775 30.0023 22.576 28.3182C23.3542 27.325 24.4135 26.5893 25.6158 26.2067C26.8181 25.8241 28.1078 25.8125 29.3168 26.1734C30.3382 26.4287 31.0531 27.9097 31.9723 29.0331C32.7179 31.1422 33.5911 33.2053 34.5767 35.2122C35.3245 36.2361 35.6367 37.5143 35.4454 38.7677C35.254 40.021 34.5746 41.1478 33.5554 41.902C31.2574 43.9446 31.6148 45.6298 33.249 47.9278C36.8617 53.1324 41.8466 57.2334 47.6498 59.7753C49.2839 60.4902 50.5095 60.6435 51.5819 58.9582C52.0415 58.2944 52.6543 57.7326 53.165 57.1198C56.1269 53.392 55.2077 53.443 59.9058 55.4857C61.4021 56.1138 62.8523 56.8492 64.2465 57.6816C65.6253 58.4986 67.719 59.3668 68.0254 60.5924C68.3202 61.922 68.2426 63.3072 67.8012 64.5955C67.3597 65.8839 66.5714 67.0255 65.5231 67.8949Z"
                                     fill="CURRENT" />
                             </svg>
-                        </div>
+                        </a>
                     </div>
-                    <div
+                    <a target="_blank" href="https://www.behance.net/sofya_design_studio"
                         class="h-[60%] sm:rounded-[10px]  hover:h-[80%] flex cursor-pointer hover:bg-[white] group duration-[.3s] overflow-hidden relative items-start p-[30px] justify-between w-[100%] border-white border-[1px] rounded-[20px]">
                         <span
                             class="uppercase duration-[.3s] group-hover:text-[black] font-[nunitomedium] sm:text-[19px] text-[30px] text-white">
@@ -162,7 +163,7 @@ function sender() {
                                 fill="current" />
                         </svg>
 
-                    </div>
+                    </a>
                 </div>
 
             </div>
@@ -174,8 +175,8 @@ function sender() {
                             {{ $t('contact') }}
                         </h3>
                         <ul class="text-[20px] font-[nunitoblack] text-white uppercase mb-[5px]">
-                            <li data-aos="zoom-in-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="font-[nunitolight]">+998 (77) 777 77 77</li>
-                            <li data-aos="zoom-in-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="font-[nunitolight]">sofya@gmail.com</li>
+                            <li data-aos="zoom-in-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false">{{ $t('phonen') }}</li>
+                            <li data-aos="zoom-in-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="font-[nunitolight]"><a href="tel:+998901772299">+998 (90) 177-22-99</a></li>
                         </ul>
                         <ul class="text-[20px] mt-[44px] font-[nunitoblack] text-white uppercase mb-[5px]">
                             <li data-aos="zoom-in-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false">{{ $t('addressTitle') }}</li>
@@ -186,7 +187,7 @@ function sender() {
                 </div>
                 <div class="w-[50%] sm:w-[100%] sm:order-[-1] sm:h-[400px] h-[100%] border-[#00FFFF] border-b-[3px] border-r-[3px] pr-[15px] pb-[15px]">
                     <iframe data-aos="flip-down" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="w-[100%] h-[660px] sm:h-[380px] rounded-[20px]"
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12289.028801808507!2d66.91540645!3d39.6439258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1720475988582!5m2!1sru!2s"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1478.1769439517384!2d69.28873202675614!3d41.36220950697538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef31b482c4b93%3A0x48e7a32c29cc3448!2sSofya%20Design%20%26%20Architecture!5e0!3m2!1sru!2s!4v1722525882609!5m2!1sru!2s"
                         style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>

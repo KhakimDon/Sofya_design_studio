@@ -37,7 +37,7 @@ AOS.init({
 <template>
   <Header class="bg-[#191D1D]" />
   <main>
-    <section class="h-[900px] m:h-[800px] w-[100%] bg-[#121616]">
+    <section class="hidden h-[900px] m:h-[800px] w-[100%] bg-[#121616]">
       <div class="max-w-[1200px] xl:max-w-[95%] w-[100%] mx-auto pt-[130px]">
         <h3 data-aos="flip-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="uppercase m:text-[24px] font-[nunitoblack] text-[#00FFFF] text-[40px]">{{ $t('aboutus') }}</h3>
         <p data-aos="flip-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="max-w-[513px] text-white font-[nunitolight] m:text-[14px] m:mt-[0px] mt-[10px] mb-[44px]">
@@ -48,7 +48,7 @@ AOS.init({
         <Swiper />
       </div>
     </section>
-    <section class="bg-[#121616]">
+    <section class="bg-[#121616] pt-[160px]">
       <div class="h-[641px] m:h-[230px] m:px-[20px] relative z-[2] bg-[#121616]">
         <iframe data-aos="fade-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="h-[100%] rounded-[20px] m:rounded-[10px] z-[2] max-w-[1140px] w-[100%] mx-auto"
           src="https://www.youtube.com/embed/ll5-uxVPdkI" title="Анимация интерьера в Unreal Engine 5 | Работа студента"
@@ -58,8 +58,8 @@ AOS.init({
         <div class="absolute left-0 bottom-[50%] m:h-[200px] translate-y-[50%] w-[100%] h-[336px] bg-[#126161] z-[-2]"></div>
       </div>
       <div class="max-w-[1021px] mt-[50px] pb-[50px] mx-auto">
-        <p data-aos="fade-up" data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="text-center text-white font-[nunitolight] text-[20px] m:text-[17px] m:text-left m:px-[10px]">
-          {{ $t('aboutabout') }}
+        <p data-aos="fade-up"  v-html="$t('aboutabout') " data-aos-offset="150" data-aos-duration="1000" data-aos-once="false" class="text-left text-white font-[nunitolight] text-[20px] m:text-[17px] m:text-left m:px-[10px]">
+          
         </p>
       </div>
     </section>

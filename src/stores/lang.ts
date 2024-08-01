@@ -6,6 +6,7 @@ export const useLangStore = defineStore("language", () => {
   let once = ref(false);
 
   let ru = ref({
+    phonen: "Номер телефона:",
     lang: "Ру",
     russian: "Русский",
     uzbek: "Узбекский",
@@ -54,13 +55,43 @@ export const useLangStore = defineStore("language", () => {
     zayavka: "ОСТАВИТЬ ЗАЯВКУ !",
     socials: "МЫ В СОЦИАЛЬНЫХ СЕТЯХ",
     contact: "Контакты",
-    address: "Г. МИНСК, СТАРОВИЛЕНСКИЙ ТРАКТ, 87(3 ЭТАЖ, ОФИС 301)",
+    address: "Хушнаво 13А Ташкент, Узбекистан",
     addressTitle: "Адрес:",
     aboutus: "О НАС",
     aboutusText:
       "В этой странице мы собрали информацию про нашу компанию и про нашу команду.",
     aboutabout:
-      "С 2019 года мы создаем уют и стиль в домах и офисах. Наши дизайнеры разработают проект, подберут мебель и материалы, и проследят за всеми работами. Мы ценим доверие наших клиентов и всегда стремимся к тому, чтобы каждый проект был особенным. В процессе проектирования мы начинаем с тщательной консультации, чтобы понять ваши пожелания и потребности, создаем детализированную 3D-визуализацию, подбираем качественные материалы и контролируем каждый этап работы. Ведь хороший дизайн важен для всех проектов, так как он не только делает пространство красивым, но и функциональным, комфортным и отражающим вашу индивидуальность. Доверьтесь нам, и ваше пространство станет именно таким! Наша компания также всегда готова предложить вам новейшие тренды и уникальные решения, чтобы ваш интерьер был на высшем уровне. Мы уверены, что вместе сможем создать место, в котором вам будет приятно находиться каждый день.",
+      `О нас:
+    <br> <br>
+Наш девиз: Качество важнее денег. 
+    <br> <br>
+Наш опыт почти 6 лет. 
+Основатель SOFYA DESIGN STUDIO: Фирдавс Махкамов. 
+    <br> <br>
+Построенные объекты: Личные и деловые объекты от 100 м2. 
+    <br> <br>
+Проекты и объекты выполненные по всему миру: (Город) Ташкент и регионы Узбекистана, Москва, Казахстан, Дубай. 
+    <br> <br>
+Мы знаем, что люди, будь то молодые или пожилые, хотят комфорта, когда они работают, занимаются спортом, проводят какой-то культурный отдых или ждут гостя. 
+Именно поэтому все реализованные нами проекты помогают людям жить хорошо, чувствовать себя комфортно и в хорошем настроении. 
+    <br> <br>
+Доверие между клиентом и дизайнером укрепляется не только тогда, когда сдается идеальный проект. Возможно, когда проект будет реализован, если клиент будет чувствовать себя комфортно в созданной дизайнером среде, взаимное доверие увеличится вдвое. 
+    <br> <br>
+Мы предлагаем широкий спектр услуг: 
+Архитектурный проект, дизайн интерьера и экстерьера. 
+Строительство. Мы берем на себя все процессы ухода и управления с 0. 
+    <br> <br>
+Наши сервисы: 
+Дизайн интерьера жилого дома:
+Создание дизайн-проекта – это самый основной творческий процесс. Мечты сбудутся, в вашем воображении появится будущий дом и пробудятся эмоции. 
+При проектировании резиденции учитываются пожелания заказчика. 
+    <br> <br>
+Дизайн интерьера нежилого помещения:
+За наши проекты благодарны офисы, салоны, бутики, рестораны, спа-центры, фитнес-клубы, гостиницы. 
+    <br> <br>
+Строительный ремонт и отделка под ключ:
+Завершение проекта и проведение всех строительных процессов (частный дом, коммерческое помещение, ремонт, отделка)
+Надежные партнеры и опытная команда.`,
       protfolio: "Портфолио",
       port1: "Жилые",
       port2: "Коммерческие",
@@ -81,6 +112,7 @@ export const useLangStore = defineStore("language", () => {
   });
 
   let uz = ref({
+    phonen: "Telefon raqam:",
     lang: "Uz",
     russian: "Rus tili",
     uzbek: "Uzbek tili",
@@ -128,13 +160,43 @@ export const useLangStore = defineStore("language", () => {
     zayavka: "ARIZA QOLDIRISH !",
     socials: "Bizning ijtimoiy tarmoqlarimiz",
     contact: "Kontaktlar",
-    address: "Minsk, STAROVILENSKIY trakti, 87(3-qavat, 301-ofis)",
+    address: "Hushnavo 13A Tashkent, Uzbekistan",
     addressTitle: "Manzil:",
     aboutus: "Biz haqimizda",
     aboutusText:
       "Bu sahifada biz kompaniyamiz haqida va jamoamiz haqida ma'lumot yig'dik.",
     aboutabout:
-      "2019 yildan beri biz uylar va ofislarda qulaylik va uslubni yaratmoqdamiz. Bizning dizaynerlarimiz loyihani ishlab chiqadilar, mebel va materiallarni tanlaydilar va barcha ishlarni kuzatib boradilar. Biz mijozlarimizning ishonchini qadrlaymiz va har doim har bir loyihani alohida saqlashga intilamiz. Dizayn jarayonida biz sizning xohishingiz va ehtiyojlaringizni tushunish, batafsil 3D vizualizatsiyani yaratish, sifatli materiallarni tanlash va ishning har bir bosqichini nazorat qilish uchun ehtiyotkorlik bilan maslahatlashishdan boshlaymiz. Axir, yaxshi dizayn barcha loyihalar uchun muhimdir, chunki u nafaqat makonni chiroyli qiladi, balki funktsional, qulay va sizning shaxsiyatingizni aks ettiradi. Bizga ishoning va sizning makoningiz shunday bo'ladi! Bizning kompaniyamiz har doim sizning ichki makoningizni eng yuqori darajada ushlab turish uchun sizga eng yangi tendentsiyalar va noyob echimlarni taklif qilishga tayyor. Ishonchimiz komilki, biz birgalikda har kuni sizni xursand qiladigan joy yaratishimiz mumkin.",
+      `O’zgina o’zimiz haqimizda:
+    <br>     <br>
+Bizning shiyor: Puldan ko’ra sifat muhimroq. 
+    <br>     <br>
+Bizning tajriba qariyb 6 yil. 
+SOFYA DESIGN STUDIO asoschisi: Firdavs Mahkamov. 
+    <br>     <br>
+Qilingan obektlar: Shaxsiy va biznes uchun obyektlar 100 m2 dan boshlab. 
+    <br>     <br>
+Dunyo bo’ylab qilingan loyihalar va obyektlar: (Shahar) Toshkent va O’zbekiston viloyatlari, Moskva, Qozog’iston, Dubay. 
+    <br>     <br>
+Biz bilamizki odamlar ishlayotganda, yoki sport bilan shug’illanayotganda, yoki qandaydur madaniy hordiq chiqarayotganda, yoki mehmon kutayotganda albatta yoshmi qarimi komfort hohlaydi. 
+Shu sababdan biz qilgan barcha loyihalar insonlarni yaxshi yashashga, o’zini komfort va ko’tarinki ruhda qulay his qilishga yordam beradi. 
+    <br>     <br>
+Mijoz bilan Dizaynerni o’rtasidagi ishonch faqat mukammal loyiha topshirilganda mustahkamlanmaydi. Balki loyiha realizatsya qilinganda, Dizayner yaratgan muhitda mijoz o’zini komfort his qilsa, o’rtadagi ishonch ikki barobar mustahkamlanadi. 
+    <br>     <br>
+Biz keng qamrovli xizmat ko’rsatishni taklif qilamiz: 
+Arxitektura loyiha, ichki va tashqi dizayn. 
+Qurilish. Pardozlash va boshqarish barcha jarayonlarni 0 dan o’z zimmamizga olish. 
+    <br>     <br>
+Bizning xizmatlar: 
+Turar joy Interyer Dizayn:
+Dizayn loyihasini yaratish bu eng asosiy ijodiy jarayon hisoblanadi. Orzular amalga oshadi, kelajakdagi uyingiz tasavvuringizga keladi va hissiyot uyg’onadi. 
+Turar joy dizaynini qilishda mijozning hohish istaklari inobatga olinadi, oilada necha kishiligi va qanday ranglar yaxshi ko’rishini hisobga olib dizayn loyiha qilinadi. 
+    <br>     <br>
+Noturar biznes uchun Interyer dizayn:
+Ofislar, Salon, Butik do’konlar, Restoran, Spa markazlari, fitnes clublar, Mehmonxonalar biz qilgan loyihalarimizdan shu vaqtgacha minnaddorchilik bildirishadi. 
+    <br>     <br>
+Qurilish kalitgacha tamirlash va pardozlash:
+Loyihani tugallab qurilishni barcha jarayonlarini o’z zimmamizga olish(shaxsiy uy, biznes uchun binolar, tamirlash, pardozlash)
+Ishonchlik hamkorlar, va tajribali jamoa.`,
       protfolio: "Portfolio",
       port1: "Turar-joy",
       port2: "Tijorat",
@@ -155,6 +217,7 @@ export const useLangStore = defineStore("language", () => {
   });
 
   let en = ref({
+    phonen: "Phone Number:",
     lang: "En",
     russian: "Russian",
     uzbek: "Uzbek",
@@ -203,13 +266,43 @@ export const useLangStore = defineStore("language", () => {
     zayavka: "Send !",
     socials: "WE ARE IN SOCIAL NETWORKS",
     contact: "Contacts",
-    address: "87 STAROVILENSKY TRACT, MINSK (3RD FLOOR, OFFICE 301)",
+    address: "Hushnavo 13A Tashkent, Uzbekistan",
     addressTitle: "Address:",
     aboutus: "About us",
     aboutusText:
       "On this page we have collected information about our company and our team,",
     aboutabout:
-      "Since 2019, we have been creating comfort and style in homes and offices. Our designers will develop a project, select furniture and materials, and monitor all the work. We value the trust of our customers and always strive to make every project special. During the design process, we start with a thorough consultation to understand your wishes and needs, create a detailed 3D visualization, select high-quality materials and control every stage of the work. After all, good design is important for all projects, as it not only makes the space beautiful, but also functional, comfortable and reflecting your personality. Trust us, and your space will become exactly like this! Our company is also always ready to offer you the latest trends and unique solutions so that your interior is at the highest level. We are sure that together we can create a place where you will be happy to be every day.",
+      `About us:
+    <br> <br>
+Our motto is: Quality is more important than money. 
+    <br> <br>
+Our experience is almost 6 years. 
+Founder of SOFYA DESIGN STUDIO: Firdavs Makhkamov. 
+    <br> <br>
+Built facilities: Personal and business facilities from 100 m2. 
+    <br> <br>
+Projects and facilities completed all over the world: (City) Tashkent and the regions of Uzbekistan, Moscow, Kazakhstan, Dubai. 
+    <br> <br>
+We know that people, whether young or old, want comfort when they work, play sports, spend some kind of cultural holiday or wait for a guest. 
+That is why all the projects we have implemented help people live well, feel comfortable and in a good mood. 
+    <br> <br>
+Trust between the client and the designer is strengthened not only when the ideal project is given up. Perhaps, when the project is implemented, if the client feels comfortable in the environment created by the designer, mutual trust will double. 
+    <br> <br>
+We offer a wide range of services: 
+Architectural design, interior and exterior design. 
+Construction. We take over all the care and management processes from 0.
+<br> <br>
+Our services: 
+Interior design of a residential building:
+Creating a design project is the most basic creative process. Dreams will come true, a future home will appear in your imagination and emotions will awaken. 
+The customer's wishes are taken into account when designing the residence. 
+    <br> <br>
+Interior design of non-residential premises:
+Offices, salons, boutiques, restaurants, spas, fitness clubs, hotels are grateful for our projects. 
+    <br> <br>
+Turnkey construction repair and finishing:
+Completion of the project and carrying out all construction processes (private house, commercial premises, repair, finishing)
+Reliable partners and an experienced team.`,
       protfolio: "Portfolio",
       port1: "Residential",
       port2: "Сommercial",

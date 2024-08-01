@@ -159,12 +159,12 @@ setTimeout(() => {
   document.querySelector('.loading-image').classList.add('load')
   document.querySelector('.preloader-animation').classList.add('hid')
 }, 3000);
-
 </script>
 
 <template>
   <Header />
   <main class="overflow-x-hidden">
+
     <section class="first m:max-h-[max-content] m:h-[max-content] max-h-[1000px] relative h-[100vh] w-[100%]">
       <div class="max-w-[1200px] sm:px-[0px] xl:px-[10px] h-[100%] mx-auto flex-col flex justify-between">
         <div class="sm:hidden h-[120px] m:h-[200px]"></div>
